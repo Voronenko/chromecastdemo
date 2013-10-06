@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-cast-api-enabled="true">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Chromecast demo</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+    <script data-main="assets/js/main.js" src="assets/js/require.js"></script>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <!-- Static navbar -->
+      <div class="navbar navbar-default">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Chromecast sender app</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">See more <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="https://developers.google.com/cast/reference/">Developer reference</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">See also</li>
+                <li><a href="http://labs.voronenko.info/">labs</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active" data-bind="text:ActivityStatus"></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+
+
+      <div class="jumbotron">
+        <p>Google Cast is a screen-sharing technology that lets a user send and control content like video from a small computing device like a phone, tablet, or laptop to a large display device like a television.
+
+
+            The sender may be a phone or tablet running on Android or iOS, or it may be a laptop computer running Chrome OS, Mac OS, or Windows. A sender application running on the sender device uses the Google Cast API appropriate to its operating system to discover and transmit to the receiver application running on the receiver device. You can use the sender APIs to enable your Android, iOS, or Chrome app to send content to a large display.</p>
+      </div>
+
+<div class="btn-group">
+  <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+    Casting On <span data-bind="text:selectedDevice().name"></span> <span data-bind="text:selectedDevice.id"></span> <span data-bind="text:selectedDevice.ipAddress"></span> <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" data-bind="foreach:devices">
+    <li data-bind="click:$parent.setCastingDevice">
+        <strong data-bind="text:name"></strong>(<span data-bind="text:ipAddress"></span>/<span data-bind="text:id"></span>)
+    </li>
+  </ul>
+</div>
+
+      <div>
+          <ul data-bind="foreach:PlayList" class="nav nav-pills nav-stacked">
+              <li data-bind="text:content.mp4, click:$parent.playOnChromeCast"></li>
+          </ul>
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+
+    <script type="text/javascript">
+
+        var appConfig = {
+          playlist: '/chromecast/assets/data/playlist.json'
+        };
+
+        require(["c/app"], function(app){
+            app.init(appConfig).done(app.run);
+        })
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,41 @@
+{"apiVersion":"2.0",
+ "data":{
+    "id":"1",
+    "author":"Slavko",
+    "title":"Demo playlist for chromecast",
+    "description":"Demo playlist for chromecast",
+    "tags":[
+       "google","chromecast","demo"
+    ],
+    "totalResults":4,
+    "items":[
+       {"id":"1",
+        "position":1,
+        "author":"Slavko",
+        "video":{
+           "content":{
+              "mp4":"http://commondatastorage.googleapis.com/gtv-videos-bucket/ED_1280.mp4"
+           }
+        }
+       },
+        {"id":"2",
+         "position":1,
+         "author":"Slavko",
+         "video":{
+            "content":{
+               "mp4":"http://commondatastorage.googleapis.com/gtv-videos-bucket/reel_2012_1280x720.mp4"
+            }
+         }
+        },
+        {"id":"3",
+         "position":1,
+         "author":"Slavko",
+         "video":{
+            "content":{
+               "mp4":"http://commondatastorage.googleapis.com/gtv-videos-bucket/big_buck_bunny_1080p.mp4"
+            }
+         }
+        }
+   ]
+ }
+}
