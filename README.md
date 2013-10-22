@@ -31,37 +31,24 @@ You should expect to receive the answer in 24-48hours. If it is not in case, rep
 
 ### Configure Chrome Cast extension settings
 
-<table>
-    <tr>
-        <td>
-            <figure>
-              ![](https://raw.github.com/Voronenko/chromecastdemo/master/images/googlecaststore.jpg)
-              <figcaption>Install Cast extension from google chrome store</figcaption>
-            </figure>
-        </td>
-        <td>
-            <figure>
-                ![](https://raw.github.com/Voronenko/chromecastdemo/master/images/extensionoptions.jpg)
-              <figcaption>Choose opitons</figcaption>
-            </figure>
+![Install Cast extension from google chrome store](https://raw.github.com/Voronenko/chromecastdemo/master/images/googlecaststore.jpg)              
 
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <figure>
-                ![](https://raw.github.com/Voronenko/chromecastdemo/master/images/blueicon.jpg)
-                <figcaption>Click four(4) times on a top blue icon</figcaption>
-            </figure>
-        </td>
-        <td>
-            <figure>
-                ![](https://raw.github.com/Voronenko/chromecastdemo/master/images/developersettings.jpg)
-                <figcaption>Under Developer Settings, register your live and staging website domains. Good idea to list there http://localhost/ as well.</figcaption>
-            </figure>
-        </td>
-    </tr>
-</table>
+Install Cast extension from google chrome store
+
+![Choose opitons](https://raw.github.com/Voronenko/chromecastdemo/master/images/extensionoptions.jpg)
+
+Choose opitons
+
+
+![Click four(4) times on a top blue icon](https://raw.github.com/Voronenko/chromecastdemo/master/images/blueicon.jpg)
+
+Click four(4) times on a top blue icon
+
+![Under Developer Settings, register your live and staging website domains. Good idea to list there localhost as well.](https://raw.github.com/Voronenko/chromecastdemo/master/images/developersettings.jpg)
+
+Under Developer Settings, register your live and staging website domains. Good idea to list there localhost as well.
+
+
 
 ### Wait for device whitelisting confirmation
 
@@ -278,6 +265,10 @@ used.
 
             }
 </pre>
+
+
+## Code in action
+Code can be downloaded from repository https://github.com/Voronenko/chromecastdemo
 
 ## Points of Interest
 
